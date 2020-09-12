@@ -1,0 +1,19 @@
+<html> 
+<head><title> London weather </title>
+<h1><center>Weather Info:</center><br><br></h1>
+</head>
+<body bgcolor=#99ccff>
+    {% if data.city and data.country_code and data.Mintemp and data.Maxtemp and data.pressure and data.humidity and data.coordinates%}
+    <center>
+        <table>
+            <tr><td><h2>City name:</h2></td> <td><h2>{{data.city}}</h2></td> </tr>
+                <tr><td><h3> Country:</h3> </td> <td><h3> {{data.country_code}}</h3> </td></tr> 
+                <tr><td><h3> Coordinates:</h3> </td> <td><h3> {{data.coordinates}}</h3> </td></tr>
+                <tr><td><h3> Minimum Temperature(K):</h3> </td> <td><h3> {{data.Mintemp}} K</h3> </td></tr>
+                <tr><td><h3> Maximum Temperature(K):</h3> </td> <td> <h3> {{data.Maxtemp}} K</h3> </td></tr>
+                <tr><td><h3> Pressure(Pa):</h3> </td> <td><h3> {{data.pressure}} Pa</h3> </td></tr> 
+                <tr><td><h3> Relative Humidity:</h3> </td><td> <h3> {{data.humidity}} %</h3> </td></tr>
+        </table></center>
+    {% endif %}
+</body>
+</html>
